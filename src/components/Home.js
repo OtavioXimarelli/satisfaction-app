@@ -35,18 +35,33 @@ const Home = () => {
 
   return (
     <div className="home">
+      <div className="container"></div> {/* Added the container div */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} handleMenuClick={handleMenuClick} menuRef={menuRef} />
       <motion.header className="hero" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <h1>Bem-vindo à G Desempenho</h1>
         <p className="tagline">Inovação e excelência em cada projeto</p>
-        <Link to="mailto:gdesempenho@hotmail.com" className="cta-button">Entre em Contato</Link>
+        <motion.a // Botão de contato
+          href="mailto:gdesempenho@hotmail.com"
+          className="button" // Updated class
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Entre em Contato
+        </motion.a>
       </motion.header>
       <About />
       <Mission />
       <Values />
+      <h2>Veja o resultado do nosso trabalho em uma empresa parceira</h2>
+      <p>Todos os dados são coletados de forma 100% anônima, garantindo uma pesquisa extremamente precisa e confidencial.</p>
+      <motion.div // Botão para o gráfico de satisfação
+          className="button" // Updated class
+          whileHover={{ scale: 1.05 }}>
+          <Link to="/satisfaction" style={{ color: 'white', textDecoration: 'none' }}>Gráfico de Satisfação</Link> {/* Adicionando estilo inline para o link */}
+      </motion.div>
       <Footer />
-    </div>
+    </div> // Closing the div tag
   );
 };
 
-export default Home;
+export default Home; // Ensure this line is present
