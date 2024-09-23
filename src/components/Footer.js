@@ -15,7 +15,7 @@ const Footer = () => {
         <Link to="#" title="Instagram"><FaInstagram /></Link>
         <Link to="#" title="LinkedIn"><FaLinkedin /></Link>
         <a href="https://github.com/OtavioXimarelli" target="_blank" rel="noopener noreferrer" title="My GitHub">
-          <FaGithub style={{ marginRight: '5px' }} />
+          <FaGithub />
         </a>
       </div>
 
@@ -27,6 +27,12 @@ const Footer = () => {
             Otavio Ximarelli
           </a>
         </p>
+      </div>
+
+      <div className="footer-links">
+        <Link to="/about" style={{ margin: '0 10px' }}>Sobre Nós</Link>
+        <Link to="/contact" style={{ margin: '0 10px' }}>Contato</Link>
+        <Link to="/privacy" style={{ margin: '0 10px' }}>Política de Privacidade</Link>
       </div>
     </footer>
   );

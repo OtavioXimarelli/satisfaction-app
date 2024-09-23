@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from './Header'; // Novo componente
-import Footer from './Footer'; // Novo componente
 import About from './About'; // Novo componente
 import Mission from './Mission'; // Novo componente
 import Values from './Values'; // Novo componente
@@ -34,12 +33,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div className="container"></div> {/* Added the container div */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} handleMenuClick={handleMenuClick} menuRef={menuRef} />
       <motion.header className="hero" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <h1>Bem-vindo à G Desempenho</h1>
-        <p className="tagline">Inovação e excelência em cada projeto</p>
+        <p className="tagline">Inovação e excelência em cada projeto.</p>
         <motion.a // Botão de contato
           href="mailto:gdesempenho@hotmail.com"
           className="button" // Updated class
@@ -52,14 +51,15 @@ const Home = () => {
       <About />
       <Mission />
       <Values />
-      <h2>Veja o resultado do nosso trabalho em uma empresa parceira</h2>
-      <p>Todos os dados são coletados de forma 100% anônima, garantindo uma pesquisa extremamente precisa e confidencial.</p>
+      <h2 style={{ textAlign: 'center', margin: '40px 0' }}>Veja o resultado do nosso trabalho em uma empresa parceira</h2>
+      <p style={{ textAlign: 'center', marginBottom: '20px' }}>Todos os dados são coletados de forma 100% anônima, garantindo uma pesquisa extremamente precisa e confidencial.</p>
       <motion.div // Botão para o gráfico de satisfação
           className="button" // Updated class
-          whileHover={{ scale: 1.05 }}>
+          whileHover={{ scale: 1.05 }}
+          style={{ margin: '20px auto' }} // Adicionando margem superior para centralizar
+      >
           <Link to="/satisfaction" style={{ color: 'white', textDecoration: 'none' }}>Gráfico de Satisfação</Link> {/* Adicionando estilo inline para o link */}
       </motion.div>
-      <Footer />
     </div> // Closing the div tag
   );
 };
