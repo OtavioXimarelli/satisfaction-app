@@ -21,6 +21,15 @@ const SatisfactionChart = () => {
 
   const options = {
     responsive: true,
+    animations: {
+      tension: {
+        duration: 1000,
+        easing: 'linear',
+        from: 1,
+        to: 0,
+        loop: true,
+      },
+    },
     plugins: {
       legend: {
         position: 'top',
@@ -34,6 +43,13 @@ const SatisfactionChart = () => {
         color: '#ffffff',
         font: {
           size: 18,
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => {
+            return `${tooltipItem.dataset.label}: ${tooltipItem.raw}%`; // Exibe a porcentagem no tooltip
+          },
         },
       },
     },

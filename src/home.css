@@ -9,10 +9,10 @@
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  font-family: 'Arial', sans-serif;
+  background-color: #333030a1; /* Cinza claro */
+  font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
   line-height: 1.6;
+  color: var(--text-light);
 }
 
 .home {
@@ -22,7 +22,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .hero {
@@ -96,10 +96,12 @@ body {
 }
 
 .value-item {
-  background-color: var(--bg-light);
+  background: #f4f4f448; /* Fundo branco para itens de valor */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin: 10px;
+  transition: transform 0.3s; /* Transição suave */
 }
 
 .value-item .icon {
@@ -141,4 +143,39 @@ h2 {
   .about, .mission {
     margin-bottom: 30px;
   }
+}
+
+.footer {
+  background-color: var(--bg-medium); /* Usando a cor de fundo média */
+  color: var(--text-light); /* Usando a cor de texto clara */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--accent); /* Cor padrão do link */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.footer a:hover {
+  color: var(--accent-hover); /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho do ícone e do texto */
+}
+
+.footer a .icon {
+  font-size: 1.2rem; /* Tamanho do ícone */
+  color: var(--accent); /* Cor do ícone */
+  transition: color 0.3s ease; /* Transição suave para o ícone */
+}
+
+.footer a:hover .icon {
+  color: var(--accent-hover); /* Cor do ícone ao passar o mouse */
 }
