@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #333030a1; /* Cinza claro */
+  background-color: #000000; /* Cinza claro */
   font-family: 'Roboto', sans-serif; /* Fonte do Google Fonts */
   line-height: 1.6;
   color: var(--text-light);
