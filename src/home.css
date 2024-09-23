@@ -1,0 +1,144 @@
+:root {
+  --bg-dark: #1a1a1a;
+  --bg-medium: #2a2a2a;
+  --bg-light: #3a3a3a;
+  --text-light: #f0f0f0;
+  --text-medium: #d0d0d0;
+  --accent: #4a90e2;
+  --accent-hover: #3a7bc8;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.home {
+  color: var(--text-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  background-color: var(--bg-medium);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-medium);
+}
+
+.cta-button, .secondary-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.secondary-button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.about-mission {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  background-color: var(--bg-dark);
+}
+
+.about, .mission {
+  flex-basis: 48%;
+}
+
+.values {
+  background-color: var(--bg-medium);
+  padding: 50px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.value-item {
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.value-item .icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.value-item h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.value-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.value-item li {
+  margin-bottom: 5px;
+}
+
+.satisfaction {
+  padding: 50px 0;
+  text-align: center;
+  background-color: var(--bg-dark);
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-mission {
+    flex-direction: column;
+  }
+  
+  .about, .mission {
+    margin-bottom: 30px;
+  }
+}

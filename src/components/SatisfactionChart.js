@@ -12,8 +12,8 @@ const SatisfactionChart = () => {
       {
         label: 'Satisfação dos Funcionários',
         data: [75, 68, 82, 70, 65],
-        backgroundColor: 'rgba(129, 199, 132, 0.8)',
-        borderColor: 'rgba(129, 199, 132, 1)',
+        backgroundColor: 'rgba(33, 150, 243, 0.8)', // Mudado para um tom de azul
+        borderColor: 'rgba(33, 150, 243, 1)', // Mudado para um tom de azul mais escuro
         borderWidth: 1,
       },
     ],
@@ -25,7 +25,7 @@ const SatisfactionChart = () => {
       legend: {
         position: 'top',
         labels: {
-          color: '#e0e0e0',
+          color: '#ffffff', // Mudado para branco para melhor contraste
         },
       },
       title: {
@@ -44,21 +44,21 @@ const SatisfactionChart = () => {
         title: {
           display: true,
           text: 'Porcentagem de Satisfação',
-          color: '#e0e0e0',
+          color: '#ffffff', // Mudado para branco
         },
         ticks: {
-          color: '#e0e0e0',
+          color: '#ffffff', // Mudado para branco
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.2)', // Aumentado o contraste
         },
       },
       x: {
         ticks: {
-          color: '#e0e0e0',
+          color: '#ffffff', // Mudado para branco
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
+          color: 'rgba(255, 255, 255, 0.2)', // Aumentado o contraste
         },
       },
     },
