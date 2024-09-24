@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/privacyPolicy.css'; // Importando o CSS para estilização
+import { Link } from 'react-router-dom'; // Adicione esta importação
 
 const PrivacyPolicy = () => {
   return (
@@ -45,6 +46,9 @@ const PrivacyPolicy = () => {
         <p>
           Se você tiver alguma dúvida sobre esta política de privacidade, entre em contato conosco através do e-mail: gdesempenho@hotmail.com.
         </p>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <Link to="/" className="button">Voltar para a Página Inicial</Link> {/* Botão para voltar */}
       </div>
     </div>
   );
