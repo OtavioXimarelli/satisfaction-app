@@ -1,1 +1,1 @@
-<a href="https://satisfaction-app.vercel.app/" target="blank">See here</a>
+<a href="https://satisfaction-app.vercel.app/" target="_blank">See here</a>
