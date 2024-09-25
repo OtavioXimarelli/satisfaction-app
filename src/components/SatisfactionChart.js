@@ -8,14 +8,16 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend,
 const SatisfactionChart = () => {
   const [chartType, setChartType] = useState('bar'); // Estado para o tipo de gráfico
 
+  const colors = ['#4a90e2', '#e94e77', '#f6b93b', '#4caf50', '#ff9800']; // Esquema de cores
+
   const data = {
     labels: ['Liderança', 'Comunicação', 'Ambiente de Trabalho', 'Oportunidades de Crescimento', 'Remuneração'],
     datasets: [
       {
         label: 'Satisfação dos Funcionários',
         data: [75, 68, 82, 70, 65],
-        backgroundColor: chartType === 'pie' ? ['#4a90e2', '#e94e77', '#f6b93b', '#4caf50', '#ff9800'] : 'rgba(33, 150, 243, 0.8)',
-        borderColor: chartType === 'pie' ? 'transparent' : 'rgba(33, 150, 243, 1)',
+        backgroundColor: chartType === 'pie' ? colors : colors.map(color => color + '80'), // Cores para gráfico de barras e linhas
+        borderColor: chartType === 'pie' ? 'transparent' : colors,
         borderWidth: 1,
       },
     ],
@@ -80,7 +82,11 @@ const SatisfactionChart = () => {
       case 'line':
         return <Line data={data} options={options} />;
       case 'pie':
-        return <Pie data={data} options={options} />;
+        return (
+          <div style={{ width: '100%', maxWidth: '400px', margin: '0 auto' }}> {/* Ajuste a largura máxima */}
+            <Pie data={data} options={options} />
+          </div>
+        );
       default:
         return <Bar data={data} options={options} />;
     }
